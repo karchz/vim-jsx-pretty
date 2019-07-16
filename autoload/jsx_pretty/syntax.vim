@@ -14,7 +14,7 @@ function! jsx_pretty#syntax#highlight()
         \ matchgroup=NONE
         \ end=+\(/\_s*>\)\@=+
         \ contained
-        \ contains=jsxOpenTag,jsxEscapeJs,jsxAttrib,jsComment,@javascriptComments,javaScriptLineComment,javaScriptComment,typescriptLineComment,typescriptComment,jsxSpreadOperator
+        \ contains=jsxOpenTag,jsxEscapeJs,jsxAttrib,jsComment,@javascriptComments,javaScriptLineComment,javaScriptComment,jsxSpreadOperator
         \ keepend
         \ extend
 
@@ -49,7 +49,7 @@ function! jsx_pretty#syntax#highlight()
         \ end=++
         \ extend
         \ contained
-        \ contains=jsBlock,javascriptBlock,javaScriptBlockBuildIn,typescriptBlock
+        \ contains=jsBlock,javascriptBlock,javaScriptBlockBuildIn
 
   " <tag key={this.props.key}>
   " ~~~~
@@ -146,7 +146,7 @@ function! jsx_pretty#syntax#highlight()
           \ end=+`+me=e-1
           \ extend
           \ contained
-          \ containedin=jsTemplateString,javascriptTemplate,javaScriptStringT,typescriptStringB
+          \ containedin=jsTemplateString,javascriptTemplate,javaScriptStringT
           \ contains=jsxElement'
 
     syntax region jsxEscapeJs
@@ -154,7 +154,7 @@ function! jsx_pretty#syntax#highlight()
           \ end=++
           \ extend
           \ contained
-          \ contains=jsTemplateExpression,javascriptTemplateSubstitution,javaScriptEmbed,typescriptInterpolation
+          \ contains=jsTemplateExpression,javascriptTemplateSubstitution,javaScriptEmbed
 
     syntax region jsxOpenTag
           \ matchgroup=jsxOpenPunct
